@@ -19,6 +19,12 @@
   },
   {
     "remote":      "github",
+    "repository":  "SlimRoms/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat",
+    "branch":      "ng7.0"
+  },
+  {
+    "remote":      "github",
     "repository":  "SlimShadys/arm-eabi-uber-4.9",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-uber-4.9",
     "branch":      "master"
