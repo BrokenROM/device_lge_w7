@@ -22,7 +22,7 @@
 <resources>
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
                   autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">false</bool>
+    <bool name="config_showNavigationBar">true</bool>
 
     <!-- Our modem doesn't support this query yet -->
     <string name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|HSPAP|GSM|WCDMA</string>
@@ -44,4 +44,38 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">300</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool> -->
+
+    <!-- Control the behavior when the user long presses the home button.
+            0 - Nothing
+            1 - Recent apps view in SystemUI
+            2 - Launch assist intent
+         This needs to match the constants in
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+    -->
+    <integer name="config_longPressOnHomeBehavior">1</integer>
+
+    <!-- Control the behavior when the user double-taps the home button.
+            0 - Nothing
+            1 - Recent apps view in SystemUI
+         This needs to match the constants in
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+    -->
+    <integer name="config_doubleTapOnHomeBehavior">0</integer>
+
+    <!-- Control the behavior when the user long presses the back button.  Non-zero values are only
+         valid for watches as part of CDD/CTS.
+            0 - Nothing
+            1 - Go to voice assist
+    -->
+    <integer name="config_longPressOnBackBehavior">0</integer>
+
+     <!-- Whether cpu boost is enabled for AppLaunch -->
+    <bool name="config_enableCpuBoostForAppLaunch">true</bool>
+    <integer name="launchboost_timeout_param">1</integer>
+    <integer-array name="launchboost_param_value"/>
+
+    <!-- Whether cpu boost is enabled for animation. -->
+    <bool name="config_enablePerfBoostForAnimation">true</bool>
+    <integer name="animationboost_timeout_param">10</integer>
+    <integer-array name="animationboost_param_value"/>
 </resources>
