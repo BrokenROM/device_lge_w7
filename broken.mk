@@ -1,7 +1,5 @@
 # Inherit some common Broken stuff.
 $(call inherit-product, vendor/broken/config/common_full_phone.mk)
-# Inherit system props w7 device
-$(call inherit-product, device/lge/w7/system_prop.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 540
